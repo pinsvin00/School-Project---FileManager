@@ -2,7 +2,7 @@
   "name": "testgithubheroku01",
   "version": "1.0.0",
   "description": "test999",
-  "main": "server.js",
+  "main": "main.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node main.js"
   },
   "author": "",
   "license": "ISC"
