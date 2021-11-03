@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 3000;
+const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const multer = require("multer");
 
@@ -68,12 +68,10 @@ app.get("/upload", (req, res) => {
 });
 
 const imageUrl = {
-  "text/javascript":
-    "https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png",
+  "text/javascript": "https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png",
 };
 
-const notMapped =
-  "https://i.pinimg.com/originals/d0/78/22/d078228e50c848f289e39872dcadf49d.png";
+const notMapped = "https://i.pinimg.com/originals/d0/78/22/d078228e50c848f289e39872dcadf49d.png";
 app.post("/upload", upload.array("files", 12), (req, res) => {
   req.files.forEach((el) => {
     const splitted = el.path.split("/");
@@ -82,8 +80,7 @@ app.post("/upload", upload.array("files", 12), (req, res) => {
       id: files.length,
       orginalName: el.originalname,
       name: name,
-      image:
-        imageUrl[el.mimetype] !== undefined ? imageUrl[el.mimetype] : notMapped,
+      image: imageUrl[el.mimetype] !== undefined ? imageUrl[el.mimetype] : notMapped,
       type: el.mimetype,
       path: el.path,
       size: el.size,
