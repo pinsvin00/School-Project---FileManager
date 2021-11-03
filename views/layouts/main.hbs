@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="">
+    <title>Oto filemanager</title>
+    <style>
+        .ml-3{
+            margin-left: 0.5rem;
+        }
+        .upper-tab { 
+            background-color: blue;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        a {
+            color: white;
+        }
+        a:hover { 
+            color: red; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upper-tab">
+        <a href="/">Upload</a>
+        <a href="/list" class="ml-3">Filemanager</a>
+        <a href="/info" class="ml-3">Info</a>
+    </div>
+    <div style="padding: 1rem">
+        {{{body}}}    
+    </div>
+</body>
+
+</html>

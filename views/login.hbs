@@ -1,0 +1,19 @@
+<style>
+  table, th, td { border: 1px solid black; text-align: center; }
+</style>
+
+<div>
+  {{#if loggedIn}}
+
+    <h1>Gratuluje jestes zalogowany
+      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 👍👍👍👍👍👍 🉐 ㊙️ ㊗️</h1>
+  {{else}}
+    <h5>formularz logowania</h5>
+    <form action="/" method="POST">
+      <input type="text" placeholder="login" name="login" /><br />
+      <input type="text" placeholder="password" name="password" /><br />
+      <input type="submit" value="loguj" />
+    </form>
+
+  {{/if}}
+</div>

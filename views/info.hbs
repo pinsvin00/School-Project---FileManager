@@ -1,0 +1,18 @@
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+<div>
+    <span>informacje o pliku</span>
+    {{#each file}}
+    <div>
+        <span>{{@key}}</span> - <span>{{this}}</span>
+    </div>
+    {{/each}}
+    <script>
+    </script>
+</div>
