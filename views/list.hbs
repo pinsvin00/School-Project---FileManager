@@ -1,60 +1,51 @@
-
 <style>
-    table, th, td {
-        border: 1px solid black;
-        text-align: center;
-    }
-    .small-ico {
-        width: 50px;
-        height: 50px;
-    }
+  table, th, td { border: 1px solid black; text-align: center; } .small-ico { width: 50px; height: 50px; }
 </style>
 
 <div>
-    <span>file manager</span>
-    <a href="/delete_all">Usun informacje o wszystkich plikach</a>
-    <table style="width: 100%;">
-        <tr>
-            <td>id</td>
-            <td>obraz</td>
-            <td>name</td>
-            <td>size</td>
-            <td>type</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        {{#each files}}
-            <tr>
-                <td>
-                    {{id}}
-                </td>
-                <td>
-                    <img class="small-ico" src={{image}} alt="">
-                </td>
-                <td>
-                    {{orginalName}}
-                </td>
-                <td>
-                    {{size}}
-                </td>
-                <td>
-                    {{type}}
-                </td>
-                <td>
-                    <a href="/delete/{{id}}" style="color: red">USUŃ</a>
-                </td>
-                <td>
-                    <a href="/info/{{id}}" style="color :red">INFO</a>
-                </td>
-                <td>
-                    <a href="http://localhost:3000/download/{{name}}" style="color: red">POBIERZ</a>
-                </td>
-            </tr>
-        {{/each}}
-    </table>
+  <span>file manager</span>
+  <a href="/delete_all">Usun informacje o wszystkich plikach</a>
+  <table style="width: 100%;">
+    <tr>
+      <td>id</td>
+      <td>obraz</td>
+      <td>name</td>
+      <td>size</td>
+      <td>type</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    {{#each files}}
+      <tr>
+        <td>
+          {{id}}
+        </td>
+        <td>
+          <img class="small-ico" src={{image}} alt="" />
+        </td>
+        <td>
+          {{orginalName}}
+        </td>
+        <td>
+          {{size}}
+        </td>
+        <td>
+          {{type}}
+        </td>
+        <td>
+          <a href="/delete/{{id}}" style="color: red">USUŃ</a>
+        </td>
+        <td>
+          <a href="/info/{{id}}" style="color :red">INFO</a>
+        </td>
+        <td>
+          <a href="/download/{{name}}" style="color: red">POBIERZ</a>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
 
-
-    <script>
-    </script>
+  <script>
+  </script>
 </div>
